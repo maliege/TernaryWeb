@@ -1,32 +1,42 @@
 body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f4f4f9;
-    }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
 
-    .container {
-      display: flex;
-      flex-direction: row; /* Arrange items horizontally */
-      width: 90%;
-      height: 80vh;
-    }
+.container {
+  display: flex;
+  width: 90%;
+  height: 80vh;
+}
 
-    .grid {
-      flex: 1;
-      margin-right: 20px;
-    }
+.left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #d4f4d7; /* Light green */
+  margin-right: 20px;
+}
 
-    .controls {
-      display: flex;
-      align-items: center;
-      margin-right: 20px;
-    }
+.grid {
+  flex: 2;
+  background-color: #d4f4d7; /* Light green */
+}
 
-    .plot {
-      flex: 1;
-    }
+.controls {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4d4f4; /* Light pink */
+}
+
+.plot {
+  flex: 2;
+  background-color: #f4e4d4; /* Light peach */
+}
