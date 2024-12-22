@@ -18,6 +18,9 @@ const hot = new Handsontable(container, {
 
 const plotContainer = document.getElementById('plot');
 const scaleSelect = document.getElementById('scaleSelect');
+const aNameInput = document.getElementById('aname');
+const bNameInput = document.getElementById('bname');
+const cNameInput = document.getElementById('cname');
 
 function updatePlot() {
   const plotData = hot.getData().map(row => ({
@@ -34,22 +37,24 @@ function updatePlot() {
     c: plotData.map(d => d.c),
     marker: {
       symbol: 100,
-      color: '#1f77b4',
-      size: 8,
-      line: { width: 2 }
+      color: '#FF6347',
+      size: 14
     }
   };
 
   const traces = [tracePoints];
 
-  for (let i = 0; i < plotData.length; i++) {
+  if (plotData.length >= 3) {
     const tracePolygon = {
       type: 'scatterternary',
       mode: 'lines',
-      a: [plotData[i].a, plotData[(i + 1) % plotData.length].a],
-      b: [plotData[i].b, plotData[(i + 1) % plotData.length].b],
-      c: [plotData[i].c, plotData[(i + 1) % plotData.length].c],
-      line: { color: 'rgba(31, 119, 180, 0.5)', width: 1 },
+      a: [...plotData.map(d => d.a), plotData[0].a],
+      b: [...plotData.map(d => d.b), plotData[0].b],
+      c: [...plotData.map(d => d.c), plotData[0].c],
+      line: {
+        color: '#1f77b4',
+        width: 2
+      },
       fill: 'toself',
       fillcolor: 'rgba(31, 119, 180, 0.2)'
     };
@@ -61,9 +66,34 @@ function updatePlot() {
   const layout = {
     ternary: {
       sum: scale,
-      aaxis: { title: 'A', min: 0, max: scale },
-      baxis: { title: 'B', min: 0, max: scale },
-      caxis: { title: 'C', min: 0, max: scale }
+      aaxis: {
+        title: {
+          text: aNameInput.value,
+          font: { size: 14 }
+        },
+        min: 0,
+        max: scale,
+        linecolor: 'blue',
+        gridcolor: 'blue'
+      },
+      baxis: {
+        title: {
+          text: bNameInput.value,
+          font: { size: 14 }
+        },
+        min: 0,
+        max: scale,
+        linecolor: 'red',
+        gridcolor: 'red'
+      },
+      caxis: {
+        title: {
+          text: cNameInput.value,
+          font: { size: 14 }
+        },
+        min: 0,
+        max: scale
+      }
     },
     showlegend: false,
     dragmode: 'zoom',

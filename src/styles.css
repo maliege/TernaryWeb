@@ -11,6 +11,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: row;
   width: 90%;
   height: 80vh;
 }
@@ -29,14 +30,39 @@ body {
 }
 
 .controls {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex: 2;
+  /*display: flex;*/
+  align-items: normal;
+  justify-content: top;
+  padding: 5px;
+  background-color: #f4d4f4; /* Light pink */
+}
+
+.settings {
+  /*flex: 2;*/
+  /*display: flex;*/
+  align-items: normal;
+  justify-content: top;
+  padding: 5px;
   background-color: #f4d4f4; /* Light pink */
 }
 
 .plot {
-  flex: 2;
+  flex: 3;
   background-color: #f4e4d4; /* Light peach */
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
 }
