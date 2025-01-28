@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Handsontable Ternary Plot</title>
+      
+      <script type="module" crossorigin src="/assets/index-eb5d0eca.js"></script>
+      <link rel="stylesheet" href="/assets/index-213d24ec.css">
+    </head>
+    <body>
+      <div id="app">
+        <div class="container">
+          <div class="left">
+            <div id="grid" class="grid"></div>
+            <div class="controls">
+              <label for="scaleSelect">Axis Scale:</label>
+              <select id="scaleSelect">
+                <option value="1">0-1</option>
+                <option value="100">0-100</option>
+              </select>
+            </div>
+            <div class="settings">
+     
+              <form>
+                <label for="fname">Water</label>
+                <input type="text" id="aname" name="aname" value="Water">
+
+              </form>
+            </div>
+            <div class="settings">
+     
+              <form>
+                <label for="fname">Surfactant</label>
+                <input type="text" id="bname" name="bname" value="Surfactant">
+
+              </form>
+            </div>
+            <div class="settings">
+     
+              <form>
+                <label for="fname">Oil</label>
+                <input type="text" id="cname" name="cname" value="Oil">
+
+              </form>
+            </div>
+          </div>
+          <div id="plot" class="plot"></div>
+        </div>
+      </div>
+      
+    </body>
+    </html>
