@@ -69,8 +69,7 @@ function updatePlot() {
       aaxis: {
         title: {
           text: aNameInput.value,
-          font: { size: 14 },
-          dtick: 0.1
+          font: { size: 14 }
         },
         min: 0,
         max: scale,
