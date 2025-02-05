@@ -5,7 +5,10 @@ import Plotly from 'plotly.js-dist';
 const data = [
   ['Group 1', 0.2, 0.3, 0.5],
   ['Group 2', 0.4, 0.4, 0.2],
-  ['Group 3', 0.3, 0.2, 0.5]
+  ['Group 3', 0.3, 0.2, 0.5],
+  ['Group 4', 0.6, 0.3, 0.1],
+  ['Group 5', 0.8, 0.1, 0.1],
+  ['Group 6', 0.7, 0.2, 0.1]
 ];
 
 const container = document.getElementById('grid');
@@ -74,7 +77,9 @@ function updatePlot() {
         min: 0,
         max: scale,
         linecolor: 'blue',
-        gridcolor: 'blue'
+        gridcolor: 'blue',
+        ticks: 'outside',
+        dtick: scale / 10
       },
       baxis: {
         title: {
@@ -84,7 +89,9 @@ function updatePlot() {
         min: 0,
         max: scale,
         linecolor: 'red',
-        gridcolor: 'red'
+        gridcolor: 'red',
+        ticks: 'outside',
+        dtick: scale / 10
       },
       caxis: {
         title: {
@@ -92,7 +99,9 @@ function updatePlot() {
           font: { size: 14 }
         },
         min: 0,
-        max: scale
+        max: scale,
+        ticks: 'outside',
+        dtick: scale / 10
       }
     },
     showlegend: false,
