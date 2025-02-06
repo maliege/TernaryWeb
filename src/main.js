@@ -3,13 +3,14 @@ import 'handsontable/dist/handsontable.full.css';
 import Plotly from 'plotly.js-dist';
 
 const data = [
-  ['Group 1', 0.2, 0.3, 0.5],
-  ['Group 2', 0.4, 0.4, 0.2],
-  ['Group 3', 0.3, 0.2, 0.5],
-  ['Group 4', 0.6, 0.3, 0.1],
-  ['Group 5', 0.8, 0.1, 0.1],
-  ['Group 6', 0.7, 0.2, 0.1]
+  ['Group 1', 0.1934, 0.7736, 0.0328],
+  ['Group 2', 0.2898, 0.6763, 0.0338],
+  ['Group 3', 0.3679, 0.5519, 0.08],
+  ['Group 4', 0.4748, 0.4748, 0.0503],
+  ['Group 5', 0.578, 0.3853, 0.0366],
+  ['Group 6', 0.6829, 0.2926, 0.0343]
 ];
+
 
 const container = document.getElementById('grid');
 const hot = new Handsontable(container, {
@@ -76,8 +77,8 @@ function updatePlot() {
         },
         min: 0,
         max: scale,
-        linecolor: 'blue',
-        gridcolor: 'blue',
+        linecolor: 'red',
+        gridcolor: 'red',
         ticks: 'outside',
         dtick: scale / 10
       },
@@ -88,8 +89,8 @@ function updatePlot() {
         },
         min: 0,
         max: scale,
-        linecolor: 'red',
-        gridcolor: 'red',
+        linecolor: 'green',
+        gridcolor: 'green',
         ticks: 'outside',
         dtick: scale / 10
       },
@@ -100,6 +101,8 @@ function updatePlot() {
         },
         min: 0,
         max: scale,
+        linecolor: 'blue',
+        gridcolor: 'blue',
         ticks: 'outside',
         dtick: scale / 10
       }
