@@ -34,8 +34,19 @@ body {
   /*display: flex;*/
   align-items: normal;
   justify-content: top;
-  padding: 5px;
-  background-color: #f4d4f4; /* Light pink */
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: #a4d5fd; /* Light pink */
+}
+
+.fieldsets {
+  flex: 2;
+  /*display: flex;*/
+  align-items: normal;
+  justify-content: top;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .settings {
@@ -53,15 +64,21 @@ body {
 
 input[type=text] {
   width: 100%;
-  padding: 12px 20px;
+  padding: 10px 8px;
   margin: 8px 0;
   box-sizing: border-box;
-  border: 3px solid #ccc;
+  border: 2px solid #a8a8a8;
+  border-radius: 8px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;
 }
 
 input[type=text]:focus {
-  border: 3px solid #555;
+  border: 2px solid #555;
+}
+
+input[type=radio] {
+  padding: 5px;
+  margin: 5px;
 }
