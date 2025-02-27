@@ -107,8 +107,41 @@ function updatePlot() {
         dtick: scale / 10
       }
     },
-    showlegend: false,
-    dragmode: 'zoom',
+    annotations: [
+      {
+          text: aNameInput.value,
+          x: 0.1,
+          y: 0.5,
+          xref: 'paper',
+          yref: 'paper',
+          showarrow: false,
+          font: { size: 14 },
+          textangle: -60
+      },
+      {
+          text: bNameInput.value,
+          x: 1,
+          y: 0,
+          xref: 'paper',
+          yref: 'paper',
+          showarrow: false,
+          font: { size: 14 },
+          textangle: 60,
+          align: 'center'
+          
+      },
+      {
+          text: cNameInput.value,
+          x: 0.87,
+          y: 0.5,
+          xref: 'paper',
+          yref: 'paper',
+          showarrow: false,
+          font: { size: 14 }
+      }
+  ],
+    showlegend: true,
+    dragmode: 'move',
     margin: { t: 50, b: 50, l: 50, r: 50 }
   };
 
