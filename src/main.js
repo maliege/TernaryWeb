@@ -120,24 +120,26 @@ function updatePlot() {
       },
       {
           text: bNameInput.value,
-          x: 1,
-          y: 0,
+          x: 0.5, //0.5,
+          y: 0.05, //0.05,
+          xref: 'paper',
+          yref: 'paper',
+          showarrow: false,
+          font: { size: 14 },
+          textangle: 0,
+          align: 'center'
+          
+      },
+      {
+          text: cNameInput.value,
+          x: 0.87,  //0.87
+          y: 0.5, //0.5,
           xref: 'paper',
           yref: 'paper',
           showarrow: false,
           font: { size: 14 },
           textangle: 60,
           align: 'center'
-          
-      },
-      {
-          text: cNameInput.value,
-          x: 0.87,
-          y: 0.5,
-          xref: 'paper',
-          yref: 'paper',
-          showarrow: false,
-          font: { size: 14 }
       }
   ],
     showlegend: true,
